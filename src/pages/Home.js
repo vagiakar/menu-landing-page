@@ -43,13 +43,17 @@ export default function Home() {
             <div className="suggest-card">
               <Link to="/item">
                 <img className="suggest-card-img" src={img} alt="coffee" />
-                <p className="suggest-card-txt">Cappuccino Latte 2.5$</p>
+                <p className="suggest-card-txt">
+                  Cappuccino Latte <span className="price">2.5$</span>
+                </p>
               </Link>
             </div>
             <div className="suggest-card">
               <Link to="/item">
-                <img className="suggest-card-img" src={img} alt="coffe" />
-                <p className="suggest-card-txt">Cappuccino Latte 2.5$</p>
+                <img className="suggest-card-img" src={img} alt="coffee" />
+                <p className="suggest-card-txt">
+                  Cappuccino Latte <span className="price">2.5$</span>
+                </p>
               </Link>
             </div>
           </div>
