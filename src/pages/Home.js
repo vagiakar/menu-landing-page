@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../coffee-item.jpg";
+import img from "../images/coffee-item.jpg";
 export default function Home() {
   return (
     <>

@@ -90,7 +90,7 @@ img {
 }
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-    url("hero-coffee.jpg");
+    url("images/hero-coffee.jpg");
   padding-bottom: 6rem;
   padding-top: calc(6rem + var(--navbar-height));
   display: flex;
