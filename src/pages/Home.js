@@ -1,7 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../images/coffee-item.jpg";
+import MenuCard from "../components/MenuCard.js";
+import drinks from "../drinks.js";
 export default function Home() {
+  function findIndex(selectedDrink) {
+    const index = drinks.findIndex((drink) => {
+      return drink.name === selectedDrink;
+    });
+    if (index >= 0) {
+      return index;
+    }
+    return 0;
+  }
   return (
     <>
       <section className="hero">
@@ -40,23 +50,8 @@ export default function Home() {
         <div className="container">
           <h2>We suggest</h2>
           <div className="suggest-cards-container">
-            <div className="suggest-card">
-              <Link to="/item">
-                <img className="suggest-card-img" src={img} alt="coffee" />
-                <div className="suggest-card-txt">
-                  <p>Cappuccino Latte</p>
-                  <p className="price">2.5$</p>
-                </div>
-              </Link>
-            </div>
-            <div className="suggest-card">
-              <Link to="/item">
-                <img className="suggest-card-img" src={img} alt="coffee" />
-                <p className="suggest-card-txt">
-                  Cappuccino Latte <span className="price">2.5$</span>
-                </p>
-              </Link>
-            </div>
+            <MenuCard index={findIndex("Espresso")} drinks={drinks} />
+            <MenuCard index={findIndex("Macchiato")} drinks={drinks} />
           </div>
         </div>
       </section>

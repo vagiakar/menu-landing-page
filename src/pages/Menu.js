@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import drinks from "../drinks.js";
-import img from "../images/coffee-item.jpg";
+import MenuCard from "../components/MenuCard.js";
 
 const coffees = drinks.filter((drink) => {
   return drink.category === "Coffees";
@@ -77,24 +76,17 @@ export default function Menu() {
           <div className="menu-display">
             {selectedDrinks.map((category) => {
               return (
-                <div className="category">
+                <div className="category" key={category[0].category}>
                   <h2>{category[0].category}</h2>
                   <div className="menu-cards-container">
-                    {category.map((drink) => {
+                    {category.map((drink, index) => {
                       return (
-                        <div className="suggest-card">
-                          <Link to="/item">
-                            <img
-                              className="suggest-card-img"
-                              src={img}
-                              alt="coffee"
-                            />
-                            <p className="suggest-card-txt  menu-card-txt">
-                              {drink.name}
-                              <div className="price">{`${drink.price}€`}</div>
-                            </p>
-                          </Link>
-                        </div>
+                        <MenuCard
+                          key={index}
+                          index={index}
+                          menu={true}
+                          drinks={category}
+                        />
                       );
                     })}
                   </div>
