@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import drinks from "../drinks.js";
 import img from "../images/coffee-item.jpg";
+
 const coffees = drinks.filter((drink) => {
   return drink.category === "Coffees";
 });

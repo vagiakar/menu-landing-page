@@ -411,10 +411,13 @@ img {
     flex-direction: column;
     padding: 0;
   }
+  .divider {
+    background: var(--color-gray);
+    height: 1px;
+    width: 100%;
+  }
   .logo {
     padding: 1rem 0;
-    width: 100%;
-    border-bottom: 1px solid var(--color-gray);
   }
   .navbar-list-container {
     height: 0px;

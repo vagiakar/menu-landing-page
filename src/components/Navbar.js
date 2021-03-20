@@ -22,6 +22,7 @@ export default function Navbar() {
       <Link to="/" className="logo">
         Coffee<br></br>Shop
       </Link>
+      <div className="divider"></div>
       <div className="navbar-list-container" ref={refNavbarListContainer}>
         <ul className="navbar-list" ref={refNavbarList}>
           <li className="navbar-item">
