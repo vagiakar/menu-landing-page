@@ -181,9 +181,7 @@ img {
   text-align: center;
   justify-content: center;
 }
-.suggest-card .price {
-  color: rgb(168, 168, 168);
-}
+
 .suggest-card:hover {
   box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.9);
 }
@@ -194,9 +192,15 @@ img {
   opacity: 0.7;
 }
 .suggest-card-txt {
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   color: var(--color-brown);
   font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.suggest-card .price {
+  color: rgb(168, 168, 168);
+  font-size: 1rem;
 }
 .newsletter {
   background: var(--color-brown);
@@ -344,7 +348,10 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 .menu-card-txt {
-  padding: 0.5rem;
+  padding: 0.7rem;
+  font-size: 1.1rem;
+}
+.menu-card-txt .price {
   font-size: 1rem;
 }
 

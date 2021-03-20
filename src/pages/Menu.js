@@ -91,7 +91,7 @@ export default function Menu() {
                             />
                             <p className="suggest-card-txt  menu-card-txt">
                               {drink.name}
-                              <span className="price">{` ${drink.price} €`}</span>
+                              <div className="price">{`${drink.price}€`}</div>
                             </p>
                           </Link>
                         </div>

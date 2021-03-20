@@ -43,9 +43,10 @@ export default function Home() {
             <div className="suggest-card">
               <Link to="/item">
                 <img className="suggest-card-img" src={img} alt="coffee" />
-                <p className="suggest-card-txt">
-                  Cappuccino Latte <span className="price">2.5$</span>
-                </p>
+                <div className="suggest-card-txt">
+                  <p>Cappuccino Latte</p>
+                  <p className="price">2.5$</p>
+                </div>
               </Link>
             </div>
             <div className="suggest-card">

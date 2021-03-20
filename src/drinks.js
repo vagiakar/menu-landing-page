@@ -30,6 +30,7 @@ const drinks = [
     category: "Coffees",
     temperature: "hot",
     name: "Cappuccino latte",
+    price: 1.6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
     image: "../images/coffee-item.jpg",
