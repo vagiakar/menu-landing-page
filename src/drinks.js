@@ -1,5 +1,6 @@
 const drinks = [
   {
+    id: 1,
     category: "Coffees",
     temperature: "hot",
     name: "Cappuccino",
@@ -9,6 +10,7 @@ const drinks = [
     image: "../images/coffee-item.jpg",
   },
   {
+    id: 2,
     category: "Coffees",
     temperature: "hot",
     name: "Espresso",
@@ -18,6 +20,7 @@ const drinks = [
     image: "../images/coffee-item.jpg",
   },
   {
+    id: 3,
     category: "Coffees",
     temperature: "hot",
     name: "Macchiato",
@@ -27,6 +30,7 @@ const drinks = [
     image: "../images/coffee-item.jpg",
   },
   {
+    id: 4,
     category: "Coffees",
     temperature: "hot",
     name: "Cappuccino latte",
@@ -36,6 +40,7 @@ const drinks = [
     image: "../images/coffee-item.jpg",
   },
   {
+    id: 5,
     category: "Coffees",
     temperature: "cold",
     name: "Espresso freddo",
@@ -45,6 +50,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 6,
     category: "Coffees",
     temperature: "cold",
     name: "Iced latte",
@@ -54,6 +60,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 7,
     category: "Coffees",
     temperature: "cold",
     name: "Freddo cappuccino",
@@ -63,6 +70,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 8,
     category: "Coffees",
     temperature: "cold",
     name: "Greek coffee",
@@ -72,6 +80,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 9,
     category: "Non-coffees",
     temperature: "hot",
     name: "Hot chocolate",
@@ -81,6 +90,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 10,
     category: "Non-coffees",
     temperature: "cold",
     name: "Iced chocolate",
@@ -90,6 +100,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 11,
     category: "Non-coffees",
     temperature: "cold",
     name: "Orange juice",
@@ -99,6 +110,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 12,
     category: "Non-coffees",
     temperature: "hot",
     name: "Tea",
@@ -108,6 +120,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 13,
     category: "Non-coffees",
     temperature: "cold",
     name: "Iced tea",
@@ -117,6 +130,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 14,
     category: "Desserts",
     temperature: null,
     name: "Cupcake",
@@ -126,6 +140,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 15,
     category: "Desserts",
     temperature: null,
     name: "Croissant",
@@ -135,6 +150,7 @@ const drinks = [
     image: "images/coffee-item.jpg",
   },
   {
+    id: 16,
     category: "Desserts",
     temperature: null,
     name: "Cheesecake",

@@ -82,7 +82,7 @@ export default function Menu() {
                     {category.map((drink, index) => {
                       return (
                         <MenuCard
-                          key={index}
+                          key={drink.id}
                           index={index}
                           menu={true}
                           drinks={category}

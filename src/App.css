@@ -345,16 +345,40 @@ img {
 .menu-cards-container {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .menu-card-txt {
   padding: 0.7rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .menu-card-txt .price {
   font-size: 1rem;
 }
-
+.menu-item {
+  padding-top: calc(var(--navbar-height) + 6rem);
+  padding-bottom: 6rem;
+  background: var(--color-almost-black);
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+.menu-item h1 {
+  color: var(--color-brown);
+}
+.menu-item .price {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.menu-item img {
+  max-width: 500px;
+}
+.menu-item p {
+  margin-top: 2rem;
+  line-height: 1.6;
+}
 @media screen and (max-width: 1250px) {
   .info-numbers-container {
     grid-template-columns: 1fr;

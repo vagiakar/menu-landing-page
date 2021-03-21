@@ -13,18 +13,10 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/menu">
-            <Menu />
-          </Route>
-          <Route path="/item">
-            <MenuItem />
-          </Route>
-          <Route path="*">
-            <Error />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/menu" component={Menu} />
+          <Route path="/item/:id" component={MenuItem} />
+          <Route path="*" component={Error} />
         </Switch>
       </Router>
       <Footer />
