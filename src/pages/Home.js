@@ -50,7 +50,7 @@ export default function Home() {
         <div className="container">
           <h2>We suggest</h2>
           <div className="suggest-cards-container">
-            <MenuCard index={findIndex("Espresso")} drinks={drinks} />
+            <MenuCard index={findIndex("Juice")} drinks={drinks} />
             <MenuCard index={findIndex("Macchiato")} drinks={drinks} />
           </div>
         </div>

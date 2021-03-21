@@ -1,3 +1,6 @@
+import imgCoffee from "./images/coffee-item.jpg";
+import imgDessert from "./images/dessert.jpg";
+import imgNonCoffee from "./images/juice.jpg";
 const drinks = [
   {
     id: 1,
@@ -7,7 +10,7 @@ const drinks = [
     price: 1.8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "../images/coffee-item.jpg",
+    image: imgCoffee,
   },
   {
     id: 2,
@@ -17,7 +20,7 @@ const drinks = [
     price: 1.4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "../images/coffee-item.jpg",
+    image: imgCoffee,
   },
   {
     id: 3,
@@ -27,7 +30,7 @@ const drinks = [
     price: 1.6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "../images/coffee-item.jpg",
+    image: imgCoffee,
   },
   {
     id: 4,
@@ -37,7 +40,7 @@ const drinks = [
     price: 1.6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "../images/coffee-item.jpg",
+    image: imgCoffee,
   },
   {
     id: 5,
@@ -47,7 +50,7 @@ const drinks = [
     price: 1.8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgCoffee,
   },
   {
     id: 6,
@@ -57,7 +60,7 @@ const drinks = [
     price: 2.3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgCoffee,
   },
   {
     id: 7,
@@ -67,7 +70,7 @@ const drinks = [
     price: 2.0,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgCoffee,
   },
   {
     id: 8,
@@ -77,7 +80,7 @@ const drinks = [
     price: 1.2,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgCoffee,
   },
   {
     id: 9,
@@ -87,7 +90,7 @@ const drinks = [
     price: 1.8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgNonCoffee,
   },
   {
     id: 10,
@@ -97,7 +100,7 @@ const drinks = [
     price: 1.8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgNonCoffee,
   },
   {
     id: 11,
@@ -107,7 +110,7 @@ const drinks = [
     price: 2.3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgNonCoffee,
   },
   {
     id: 12,
@@ -117,7 +120,7 @@ const drinks = [
     price: 2.3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgNonCoffee,
   },
   {
     id: 13,
@@ -127,7 +130,7 @@ const drinks = [
     price: 2.3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgNonCoffee,
   },
   {
     id: 14,
@@ -137,7 +140,7 @@ const drinks = [
     price: 1.5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgDessert,
   },
   {
     id: 15,
@@ -147,7 +150,7 @@ const drinks = [
     price: 1.0,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgDessert,
   },
   {
     id: 16,
@@ -157,7 +160,7 @@ const drinks = [
     price: 2.0,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
-    image: "images/coffee-item.jpg",
+    image: imgDessert,
   },
 ];
 export default drinks;
