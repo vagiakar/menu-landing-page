@@ -41,14 +41,13 @@ img {
   font-weight: bold;
 }
 .navbar {
+  border-bottom: 1px solid var(--color-gray);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
   position: relative;
-  border-bottom: 1px solid var(--color-gray);
   min-height: var(--navbar-height);
-  position: relative;
   position: fixed;
   top: 0;
   z-index: 10;
@@ -56,12 +55,19 @@ img {
   background: var(--color-almost-black);
   padding: 0 3rem;
 }
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--color-gray);
+  transition: 0.5s;
+}
 .logo {
   font-weight: bold;
   color: var(--color-brown);
   font-size: 1.6rem;
   text-align: center;
 }
+
 .navbar-list-container {
   display: flex;
   align-items: center;
@@ -441,11 +447,6 @@ img {
     justify-content: center;
     flex-direction: column;
     padding: 0;
-  }
-  .divider {
-    background: var(--color-gray);
-    height: 1px;
-    width: 100%;
   }
   .logo {
     padding: 1rem 0;
