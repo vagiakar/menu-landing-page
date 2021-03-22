@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MenuCard from "../components/MenuCard.js";
-import drinks from "../drinks.js";
+import menuItems from "../menuItemsArray.js";
+
 export default function Home() {
-  function findIndex(selectedDrink) {
-    const index = drinks.findIndex((drink) => {
-      return drink.name === selectedDrink;
+  function findIndex(selectedItem) {
+    const index = menuItems.findIndex((item) => {
+      return item.name === selectedItem;
     });
     if (index >= 0) {
       return index;
     }
     return 0;
   }
+
   return (
     <>
       <section className="hero">
@@ -50,8 +52,8 @@ export default function Home() {
         <div className="container">
           <h2>We suggest</h2>
           <div className="suggest-cards-container">
-            <MenuCard index={findIndex("Juice")} drinks={drinks} />
-            <MenuCard index={findIndex("Macchiato")} drinks={drinks} />
+            <MenuCard menuItem={menuItems[findIndex("cappuccino")]} />
+            <MenuCard menuItem={menuItems[findIndex("espresso")]} />
           </div>
         </div>
       </section>

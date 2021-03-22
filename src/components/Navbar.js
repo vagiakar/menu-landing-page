@@ -1,15 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const refNavbarList = useRef();
   const refNavbarListContainer = useRef();
   const refDivider = useRef();
-  function displayNavbar() {
-    setIsNavbarOpen(!isNavbarOpen);
-  }
+
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => {
@@ -21,9 +19,7 @@ export default function Navbar() {
     const linksHeight = refNavbarList.current.getBoundingClientRect().height;
     if (isNavbarOpen) {
       refNavbarListContainer.current.style.height = `${linksHeight}px`;
-      const borderColor = getComputedStyle(
-        document.documentElement
-      ).getPropertyValue("--color-gray");
+      refDivider.current.style.display = `block`;
       refDivider.current.style.visibility = `visible`;
     } else {
       refNavbarListContainer.current.style.height = `0px`;
@@ -34,8 +30,10 @@ export default function Navbar() {
   function handleResize() {
     if (window.innerWidth > 800) {
       setIsNavbarOpen(false);
+      refDivider.current.style.display = `none`;
     }
   }
+
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
@@ -57,9 +55,15 @@ export default function Navbar() {
         </ul>
       </div>
       {isNavbarOpen ? (
-        <AiOutlineClose className="menu-icon" onClick={displayNavbar} />
+        <AiOutlineClose
+          className="menu-icon"
+          onClick={() => setIsNavbarOpen(!isNavbarOpen)}
+        />
       ) : (
-        <AiOutlineMenu className="menu-icon" onClick={displayNavbar} />
+        <AiOutlineMenu
+          className="menu-icon"
+          onClick={() => setIsNavbarOpen(!isNavbarOpen)}
+        />
       )}
     </nav>
   );

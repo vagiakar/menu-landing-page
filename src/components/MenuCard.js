@@ -1,22 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function MenuCard({ index, menu = false, drinks }) {
+export default function MenuCard({ menu = false, menuItem }) {
   const itemLink = {
-    pathname: `/item/${drinks[index].id}`,
-    state: { index: index, drinks: drinks },
+    pathname: `/item/${menuItem.id}`,
+    menuItem,
   };
   return (
     <div className="suggest-card">
       <Link to={itemLink}>
-        <img
-          className="suggest-card-img"
-          src={drinks[index].image}
-          alt="coffee"
-        />
+        <img className="suggest-card-img" src={menuItem.image} alt="coffee" />
         <div className={`suggest-card-txt ${menu && "menu-card-txt"}`}>
-          <p>{drinks[index].name}</p>
-          <p className="price">{drinks[index].price} €</p>
+          <p>{menuItem.name}</p>
+          <p className="price">{menuItem.price} €</p>
         </div>
       </Link>
     </div>

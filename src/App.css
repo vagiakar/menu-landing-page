@@ -46,7 +46,6 @@ img {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
-  position: relative;
   min-height: var(--navbar-height);
   position: fixed;
   top: 0;
@@ -55,26 +54,25 @@ img {
   background: var(--color-almost-black);
   padding: 0 3rem;
 }
-.divider {
-  height: 1px;
-  width: 100%;
-  background: var(--color-gray);
-  transition: 0.5s;
-}
 .logo {
   font-weight: bold;
   color: var(--color-brown);
   font-size: 1.6rem;
   text-align: center;
 }
-
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--color-gray);
+  transition: 0.5s;
+  display: none;
+}
 .navbar-list-container {
   display: flex;
   align-items: center;
 }
 .navbar-list {
   display: flex;
-  align-items: center;
   transition: 0.8s;
 }
 .navbar-item:first-child {
@@ -186,7 +184,6 @@ img {
   transition: 0.5s;
   justify-content: center;
 }
-
 .suggest-card:hover {
   box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.9);
 }
@@ -290,7 +287,7 @@ img {
 }
 .menu-header {
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-    url("images/menu.jpg");
+    url("images/hero-coffee.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -327,10 +324,6 @@ img {
 .menu-btn.active {
   background: var(--color-brown);
   color: var(--color-almost-black);
-}
-.menu-btn.active:hover,
-.menu-btn.active:focus {
-  background: #aa6320;
 }
 .menu-btn:last-child {
   margin-bottom: 0;
@@ -384,6 +377,9 @@ img {
 .menu-item p {
   margin-top: 2rem;
   line-height: 1.6;
+}
+.menu-item-btn {
+  margin-top: 2rem;
 }
 @media screen and (max-width: 1250px) {
   .info-numbers-container {

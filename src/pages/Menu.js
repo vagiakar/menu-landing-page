@@ -1,41 +1,53 @@
 import React, { useState, useEffect } from "react";
-import drinks from "../drinks.js";
+import menuItems from "../menuItemsArray.js";
 import MenuCard from "../components/MenuCard.js";
 
-const coffees = drinks.filter((drink) => {
-  return drink.category === "Coffees";
-});
-const nonCoffees = drinks.filter((drink) => {
-  return drink.category === "Non-coffees";
-});
-const desserts = drinks.filter((drink) => {
-  return drink.category === "Desserts";
-});
+const categories = [
+  ...new Set(
+    menuItems.map((drink) => {
+      return drink.category;
+    })
+  ),
+];
+categories.push("all");
 
 export default function Menu() {
-  const [category, setCategory] = useState("All");
-  const [selectedDrinks, setSelectedDrinks] = useState([
-    coffees,
-    nonCoffees,
-    desserts,
-  ]);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedMenuItems, setSelectedMenuItems] = useState(() =>
+    selectWholeMenu()
+  );
 
   useEffect(() => {
     changeMenu();
-  }, [category]);
+  }, [selectedCategory]);
 
   function changeMenu() {
-    let drinks = [];
-    if (category === "Coffees") {
-      drinks = [coffees];
-    } else if (category === "Non-coffees") {
-      drinks = [nonCoffees];
-    } else if (category === "Desserts") {
-      drinks = [desserts];
+    let selectedItems;
+    if (selectedCategory === "all") {
+      selectedItems = selectWholeMenu();
     } else {
-      drinks = [coffees, nonCoffees, desserts];
+      selectedItems = selectSpecificCategory();
     }
-    setSelectedDrinks(drinks);
+    setSelectedMenuItems(selectedItems);
+  }
+
+  function selectWholeMenu() {
+    const categoriesExceptAll = categories.filter((category) => {
+      return category !== "all";
+    });
+    return categoriesExceptAll.map((category) => {
+      return menuItems.filter((item) => {
+        return item.category === category;
+      });
+    });
+  }
+
+  function selectSpecificCategory(category = selectedCategory) {
+    return [
+      menuItems.filter((item) => {
+        return item.category === category;
+      }),
+    ];
   }
 
   return (
@@ -46,47 +58,29 @@ export default function Menu() {
       <div className="container">
         <section className="menu">
           <div className="menu-buttons-container">
-            <button
-              className={`btn menu-btn  ${category === "All" && "active"}`}
-              onClick={() => setCategory("All")}
-            >
-              All
-            </button>
-            <button
-              className={`btn menu-btn  ${category === "Coffees" && "active"}`}
-              onClick={() => setCategory("Coffees")}
-            >
-              Coffees
-            </button>
-            <button
-              className={`btn menu-btn ${
-                category === "Non-coffees" && "active"
-              }`}
-              onClick={() => setCategory("Non-coffees")}
-            >
-              Non-coffees
-            </button>
-            <button
-              className={`btn menu-btn ${category === "Desserts" && "active"}`}
-              onClick={() => setCategory("Desserts")}
-            >
-              Desserts
-            </button>
+            {categories.map((category) => {
+              return (
+                <button
+                  key={category}
+                  className={`btn menu-btn  ${
+                    selectedCategory === category && "active"
+                  }`}
+                  onClick={() => setSelectedCategory(category)}
+                >
+                  {category}
+                </button>
+              );
+            })}
           </div>
           <div className="menu-display">
-            {selectedDrinks.map((category) => {
+            {selectedMenuItems.map((category) => {
               return (
                 <div className="category" key={category[0].category}>
                   <h2>{category[0].category}</h2>
                   <div className="menu-cards-container">
-                    {category.map((drink, index) => {
+                    {category.map((item) => {
                       return (
-                        <MenuCard
-                          key={drink.id}
-                          index={index}
-                          menu={true}
-                          drinks={category}
-                        />
+                        <MenuCard key={item.id} menu={true} menuItem={item} />
                       );
                     })}
                   </div>

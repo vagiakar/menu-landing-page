@@ -1,12 +1,12 @@
 import imgCoffee from "./images/coffee-item.jpg";
 import imgDessert from "./images/dessert.jpg";
-import imgNonCoffee from "./images/juice.jpg";
-const drinks = [
+import imgNonCoffee from "./images/chocolate.jpg";
+
+const menuItems = [
   {
     id: 1,
-    category: "Coffees",
-    temperature: "hot",
-    name: "Cappuccino",
+    category: "coffees",
+    name: "cappuccino",
     price: 1.8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -14,9 +14,8 @@ const drinks = [
   },
   {
     id: 2,
-    category: "Coffees",
-    temperature: "hot",
-    name: "Espresso",
+    category: "coffees",
+    name: "espresso",
     price: 1.4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -24,9 +23,8 @@ const drinks = [
   },
   {
     id: 3,
-    category: "Coffees",
-    temperature: "hot",
-    name: "Macchiato",
+    category: "coffees",
+    name: "macchiato",
     price: 1.6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -34,9 +32,8 @@ const drinks = [
   },
   {
     id: 4,
-    category: "Coffees",
-    temperature: "hot",
-    name: "Cappuccino latte",
+    category: "coffees",
+    name: "cappuccino latte",
     price: 1.6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -44,9 +41,8 @@ const drinks = [
   },
   {
     id: 5,
-    category: "Coffees",
-    temperature: "cold",
-    name: "Espresso freddo",
+    category: "coffees",
+    name: "espresso freddo",
     price: 1.8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -54,9 +50,8 @@ const drinks = [
   },
   {
     id: 6,
-    category: "Coffees",
-    temperature: "cold",
-    name: "Iced latte",
+    category: "coffees",
+    name: "iced latte",
     price: 2.3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -64,9 +59,8 @@ const drinks = [
   },
   {
     id: 7,
-    category: "Coffees",
-    temperature: "cold",
-    name: "Freddo cappuccino",
+    category: "coffees",
+    name: "freddo cappuccino",
     price: 2.0,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -74,9 +68,8 @@ const drinks = [
   },
   {
     id: 8,
-    category: "Coffees",
-    temperature: "cold",
-    name: "Greek coffee",
+    category: "coffees",
+    name: "greek coffee",
     price: 1.2,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -84,9 +77,8 @@ const drinks = [
   },
   {
     id: 9,
-    category: "Non-coffees",
-    temperature: "hot",
-    name: "Hot chocolate",
+    category: "non-coffees",
+    name: "hot chocolate",
     price: 1.8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -94,9 +86,8 @@ const drinks = [
   },
   {
     id: 10,
-    category: "Non-coffees",
-    temperature: "cold",
-    name: "Iced chocolate",
+    category: "non-coffees",
+    name: "iced chocolate",
     price: 1.8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -104,9 +95,8 @@ const drinks = [
   },
   {
     id: 11,
-    category: "Non-coffees",
-    temperature: "cold",
-    name: "Orange juice",
+    category: "non-coffees",
+    name: "orange juice",
     price: 2.3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -114,9 +104,8 @@ const drinks = [
   },
   {
     id: 12,
-    category: "Non-coffees",
-    temperature: "hot",
-    name: "Tea",
+    category: "non-coffees",
+    name: "tea",
     price: 2.3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -124,9 +113,8 @@ const drinks = [
   },
   {
     id: 13,
-    category: "Non-coffees",
-    temperature: "cold",
-    name: "Iced tea",
+    category: "non-coffees",
+    name: "iced tea",
     price: 2.3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -134,9 +122,8 @@ const drinks = [
   },
   {
     id: 14,
-    category: "Desserts",
-    temperature: null,
-    name: "Cupcake",
+    category: "desserts",
+    name: "cupcake",
     price: 1.5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -144,9 +131,8 @@ const drinks = [
   },
   {
     id: 15,
-    category: "Desserts",
-    temperature: null,
-    name: "Croissant",
+    category: "desserts",
+    name: "croissant",
     price: 1.0,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
@@ -154,13 +140,13 @@ const drinks = [
   },
   {
     id: 16,
-    category: "Desserts",
-    temperature: null,
-    name: "Cheesecake",
+    category: "desserts",
+    name: "cheesecake",
     price: 2.0,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia.",
     image: imgDessert,
   },
 ];
-export default drinks;
+
+export default menuItems;
