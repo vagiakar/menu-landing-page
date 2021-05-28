@@ -4,14 +4,14 @@ import MenuCard from "../components/MenuCard.js";
 import menuItems from "../menuItemsArray.js";
 
 export default function Home() {
-  function findIndex(selectedItem) {
-    const index = menuItems.findIndex((item) => {
+  function findItem(selectedItem) {
+    const item = menuItems.find((item) => {
       return item.name === selectedItem;
     });
-    if (index >= 0) {
-      return index;
+    if (item) {
+      return item;
     }
-    return 0;
+    return menuItems[0];
   }
 
   return (
@@ -52,8 +52,8 @@ export default function Home() {
         <div className="container">
           <h2>We suggest</h2>
           <div className="suggest-cards-container">
-            <MenuCard menuItem={menuItems[findIndex("cappuccino")]} />
-            <MenuCard menuItem={menuItems[findIndex("espresso")]} />
+            <MenuCard menuItem={findItem("cappuccino")} />
+            <MenuCard menuItem={findItem("espresso")} />
           </div>
         </div>
       </section>

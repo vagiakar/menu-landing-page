@@ -301,6 +301,7 @@ img {
   grid-template-columns: 1fr 3fr;
   background: rgb(17, 17, 17);
   align-items: flex-start;
+  justify-content: center;
 }
 .menu-buttons-container {
   display: grid;
@@ -344,7 +345,7 @@ img {
 .menu-cards-container {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 .menu-card-txt {
   padding: 0.7rem;
