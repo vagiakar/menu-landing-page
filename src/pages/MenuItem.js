@@ -7,7 +7,7 @@ import Error from "./Error";
 export default function MenuItem() {
   const params = useParams();
   const menuItem = menuItems.find((item) => {
-    return item.id == params.id;
+    return item.id === parseInt(params.id);
   });
   if (menuItem) {
     return (
