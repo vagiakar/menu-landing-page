@@ -31,7 +31,7 @@ export default function Home() {
       </section>
       <section className="info-numbers">
         <div className="container">
-          <h2>What coffee shop means</h2>
+          <h2>What shop means</h2>
           <div className="info-numbers-container">
             <div className="info-numbers-card">
               <p className="number">20</p>

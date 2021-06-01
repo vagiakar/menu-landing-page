@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
-        Coffee<br></br>Shop
+        Shop
       </Link>
       <div className="divider" ref={refDivider}></div>
       <div className="navbar-list-container" ref={refNavbarListContainer}>

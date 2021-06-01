@@ -15,9 +15,7 @@ export default function Footer() {
           <FaTwitter className="social-icon" />
         </a>
       </div>
-      <div className="footer-copyright">
-        <p>© Copyright Coffee Shop. All rights reserved.</p>
-      </div>
+      <div className="footer-copyright"></div>
     </div>
   );
 }
